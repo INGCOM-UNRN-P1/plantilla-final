@@ -4,11 +4,11 @@ CFLAGS = -Wall -Wextra -g
 
 # Archivos comunes, este es el lugar para cambiar el nombre
 # o agregar más archivos a la compilación.
-SRCS = cadenas.c
-HDRS = cadenas.h
+SRCS = libreria.c
+HDRS = libreria.h
 
 # Objetivos
-LIBRARY_NAME = libcadenas.a
+LIBRARY_NAME = liblibreria.a
 PROG_TARGET = main_bin
 
 # Archivos para tests

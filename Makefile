@@ -1,10 +1,10 @@
 #### Esta primera parte es tecnicamente configurable, pero no se recomienda.
 
 # Nombres de las librerías (sin prefijo 'lib' y sin extensión '.a')
-LIB_NAME = cadenas arreglos
+LIB_NAME = libreria
 
 # Directorios de los programas
-PROG_DIRS = ejercicio1 ejercicio2 ejercicio3
+PROG_DIRS = ejercicio
 
 #### A partir de acá el es la parte mágica.
 
@@ -36,10 +36,7 @@ run: $(PROG_DIRS)
 .PHONY: librerias
 librerias: 
 	@echo "Compilando librerías..."
-	@echo "Cadenas Seguras"
-	$(MAKE) -C cadenas
-	@echo "Arreglos"
-	$(MAKE) -C arreglos
+	$(MAKE) -C libreria
 
 
 # Regla para compilar cada programa
@@ -50,20 +47,18 @@ $(PROG_DIRS): librerias
 # Limpieza generales de todos los programas y librerías
 .PHONY: clean
 clean:
-	@echo "Limpiando todos los programas y librerías..."
-	$(MAKE) -C cadenas clean
-	$(MAKE) -C arreglos clean
-	$(MAKE) -C ejercicio2 clean
-	$(MAKE) -C ejercicio3 clean
+	@echo "Limpiando todos los programas y libreria..."
+	$(MAKE) -C libreria clean
+	$(MAKE) -C ejercicio clean
 
 
 # Ejecutar pruebas para un programa específico (ejemplo: ejercicio2)
 .PHONY: test
 test: 
 	@echo "Ejecutando pruebas..."
-	@echo "Cadenas Seguras"
-	$(MAKE) -C cadenas test
-	@echo "Arreglos"
-	$(MAKE) -C arreglos test
+	@echo "Tests Libreria"
+	$(MAKE) -C libreria test
+	@echo "Tests Ejercicios"
+	$(MAKE) -C ejercicio test
 	$(foreach prog_dir, $(PROG_DIRS), $(MAKE) -C $(prog_dir) test;)
 

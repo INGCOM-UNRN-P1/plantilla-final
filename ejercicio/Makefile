@@ -5,7 +5,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -g
 
 # Nombres de las librerías (sin el prefijo lib y la extensión .a)
-LIB_NAME = cadenas
+LIB_NAME = libreria
 
 # Directorios de las librerías generados a partir de los nombres
 LIB_DIR = $(addprefix ../,$(LIB_NAME))
