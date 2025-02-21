@@ -1,0 +1,23 @@
+{
+    "name": "devcontainer Programación 1 UNRN",
+    "image": {
+        "name": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/gcc:1": {},
+        "ghcr.io/devcontainers/features/valgrind:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.valgrind"
+            ],
+            "settings": {
+                "C_Cpp.intelliSenseEngine": "Disabled",
+                "C_Cpp.autocomplete": "Disabled",
+                "C_Cpp.formatting": "Disabled"
+            }
+        }
+    }
+}
