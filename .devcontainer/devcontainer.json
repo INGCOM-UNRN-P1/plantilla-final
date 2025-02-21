@@ -1,35 +1,27 @@
 {
-  "name": "GCC with Valgrind",
-  "image": "mcr.microsoft.com/devcontainers/cpp:0.290.0",
+  "name": "C Development Container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
-    "ghcr.io/devcontainers/features/git:1": {},
-    "ghcr.io/devcontainers/features/cmake:1": {},
-    "ghcr.io/devcontainers/features/cpp:1": {}
+    "ghcr.io/devcontainers/features/gcc:1": {},
+    "ghcr.io/devcontainers/features/valgrind:1": {}
   },
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y valgrind cppcheck",
-  "extensions": [
-    "ms-vscode.cpptools",
-    "llvm-vs-code-extensions.vscode-clangd"
-  ],
-  "settings": {
-    "C_Cpp.intelliSenseEngine": "disabled",
-    "clangd.enabled": false,
-    "editor.suggest.enabled": false,
-    "editor.quickSuggestions": false,
-    "editor.parameterHints": false,
-    "editor.suggestOnTriggerCharacters": false,
-    "editor.snippetSuggestions": "none",
-    "github.copilot.enable": false,
-    "github.copilot.inlineSuggest.enable": false,
-    "github.copilot.editor.enableAutoCompletions": false,
-        "extensions.autoUpdate": "none",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.inlineSuggest.enabled": false,
+        "editor.quickSuggestions": { "other": false, "comments": false, "strings": false },
+        "editor.parameterHints.enabled": false,
+        "editor.hover.enabled": false,
+        "editor.suggestOnTriggerCharacters": false,
+        "editor.wordBasedSuggestions": false,
+        "editor.snippetSuggestions": "none",
+        "editor.acceptSuggestionOnEnter": "off",
         "extensions.ignoreRecommendations": true,
-        "extensions.gallery": {
-          "serviceUrl": "",
-          "cacheUrl": "",
-          "itemUrl": "",
-          "controlUrl": ""
-        }
+        "github.copilot.enable": false,
+        "github.copilot.editor.enable": false,
+        "github.copilot.inlineSuggest.enable": false
+      }
+    }
   },
-  "remoteUser": "vscode"
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y cppcheck valgrind"
 }
