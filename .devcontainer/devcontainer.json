@@ -15,7 +15,9 @@
         "extensions.ignoreRecommendations": true,
         "github.copilot.enable": false,
         "github.copilot.editor.enable": false,
-        "github.copilot.inlineSuggest.enable": false
+        "github.copilot.inlineSuggest.enable": false,
+        "github.copilot.showWelcomeNotification": false,
+        "github.copilot.statusBar": "off"
       }
     }
   },
