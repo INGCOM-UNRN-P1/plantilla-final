@@ -1,5 +1,5 @@
 {
-    "name": "devcontainer Programación 1 UNRN",
+    "name": "Programación 1",
     "image": {
         "name": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu"
     },
@@ -16,7 +16,16 @@
             "settings": {
                 "C_Cpp.intelliSenseEngine": "Disabled",
                 "C_Cpp.autocomplete": "Disabled",
-                "C_Cpp.formatting": "Disabled"
+                "C_Cpp.formatting": "Disabled",
+                "github.copilot.enable": false,
+                "extensions.autoUpdate": "none",
+                "extensions.ignoreRecommendations": true,
+                "extensions.gallery": {
+                    "serviceUrl": "",
+                    "cacheUrl": "",
+                    "itemUrl": "",
+                    "controlUrl": ""
+                }
             }
         }
     }
