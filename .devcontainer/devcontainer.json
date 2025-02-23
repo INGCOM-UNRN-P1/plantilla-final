@@ -17,7 +17,8 @@
         "github.copilot.editor.enable": false,
         "github.copilot.inlineSuggest.enable": false,
         "github.copilot.showWelcomeNotification": false,
-        "github.copilot.statusBar": "off"
+        "github.copilot.statusBar": "off",
+        "workbench.experimental.sidePanel.enabled": false
       }
     }
   },
